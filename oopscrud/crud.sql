@@ -1,23 +1,19 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2017 at 09:23 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: Nov 22, 2018 at 10:58 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
--- Database: `crud`
+-- Database: `userdb`
 --
 
 -- --------------------------------------------------------
@@ -36,9 +32,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`CategoryID`, `CategoryName`) VALUES
-(1, 'Elektronik'),
-(2, 'Dapur'),
-(3, 'Kendaraan');
+(1, 'American'),
+(2, 'Sweden'),
+(3, 'Kenya');
 
 -- --------------------------------------------------------
 
@@ -59,10 +55,11 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`ProductID`, `ProductName`, `ProductDescription`, `CategoryID`, `ProductImg`) VALUES
-(16, 'th', 'jj', 3, 'koala.jpg'),
-(28, 'ds', 'adsa', 3, 'default.jpg'),
-(31, 'tes', 'bs', 2, 'ooptestpreview.jpg'),
-(34, 'tt', 'tt', 2, 'mahirkoding_oop.jpg');
+(16, 'th', 'undefined', 0, 'default.jpg'),
+(31, 'Sports', 'Nike', 1, 'download.jfif'),
+(34, 'Casual', 'puma', 2, 'images (1).jfif'),
+(35, 'asd', 'undefined', 0, 'default.jpg'),
+(38, 'Prasa', 'entire', 1, 'images.jfif');
 
 --
 -- Indexes for dumped tables
@@ -88,12 +85,11 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `CategoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `CategoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+  MODIFY `ProductID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+COMMIT;
